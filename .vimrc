@@ -118,14 +118,6 @@ tnoremap <Esc> <C-\><C-n>
 
 filetype off
 
-" --- OLD PATHOGEN STUFF --- "
-
-" For pathogen.vim -> helps install plugins
-" #execute pathogen#infect()
-
-" Runs helptags for all installed plugins
-" call pathogen#helptags()
-
 " --- VIM PLUG STUFF --- "
 call plug#begin('~/.vim/plugged')
 
@@ -135,7 +127,7 @@ Plug 'vim-airline/vim-airline' " Airline
 
 Plug 'gcmt/taboo.vim' " Taboo
 
-Plug 'sgur/vim-lazygutter' " Lazygutter
+"Plug 'sgur/vim-lazygutter' " Lazygutter
 
 "" Language client 
 "Plug 'autozimu/LanguageClient-neovim', {
@@ -350,25 +342,11 @@ autocmd VimEnter * NERDTree | wincmd p " Moves cursor to main buffer at start
 "let g:pymode_breakpoint_cmd = ''
 "
 "" Use deoplete.
-"let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_at_startup=1
-
-let g:deoplete#enable_refresh_always=0
-
-let g:deoplete#file#enable_buffer_path=1
-
-let g:deoplete#auto_completion_start_length = 0
 
 "" Use neotex.
 "let g:neotex_enabled = 1
 "
-"" Cmder tests
-"if has("gui_running")
-"  set term=xterm
-"  set mouse=a
-"  set nocompatible
-"endif
-
 
 " Language Client stuffs
 
