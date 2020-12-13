@@ -48,19 +48,19 @@ setlocal spell spelllang=en_us
 
 " Bracket matching selection
 
-noremap % v%
+"noremap % v%
 
 " Automates the above
 
-:set showmatch
-
-:set matchtime=3
-
-inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
-
-inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
-
-inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+":set showmatch
+"
+":set matchtime=3
+"
+"inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+"
+"inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+"
+"inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 
 " Rebinds for escape key
 
@@ -100,8 +100,8 @@ set foldlevelstart=10 "Opens most folds by def
 set foldnestmax=10 " sets max for fold
 
 "move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 " Sudo permissions (unix-based os)
 command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
@@ -121,9 +121,23 @@ filetype off
 " --- VIM PLUG STUFF --- "
 call plug#begin('~/.vim/plugged')
 
+" Tim Pope's plugins
+Plug 'tpope/vim-fugitive' " Git integration
+Plug 'tpope/vim-unimpaired' " Unimpaired vim keybinds
+Plug 'tpope/vim-speeddating' " Increment dates
+Plug 'tpope/vim-surround' " Increment dates
+Plug 'tpope/vim-repeat' " Repeat plugin commands with .
+
+
+Plug 'vim-scripts/indentpython.vim' " Auto-indent pep8 style
+
+Plug 'kshenoy/vim-signature' " Visual marks
+
+
 Plug 'scrooloose/nerdtree' " Nerd tree
 
 Plug 'vim-airline/vim-airline' " Airline
+"Plug 'vim-airline/vim-airline-themes' " Airline themes
 
 Plug 'gcmt/taboo.vim' " Taboo
 
@@ -161,12 +175,14 @@ call plug#end()
 syntax on
 filetype plugin indent on
 
+" -- Airline -- "
 " --- Buffer Line --- "
 
 " enable/disable bufferline integration >
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#bufferline#overwrite_variables = 0
 let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#right_sep = '<'
 "let g:airline#extensions#tabline#left_alt_sep = '>'
 
 " --- fzf stuff --- "
