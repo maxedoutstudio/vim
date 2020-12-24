@@ -30,6 +30,10 @@ This will effectively make you have one vimrc. In-order to keep regular _vim_ fu
 
 5. Open neovim, run ex-command: ```:PlugInstall```
 
+## Clipboard Sharing
+WSL 2 changes how clipboard works. Albeit not directly related to the VIM config, without clipboard sharing, Neovim is effectively unusable for development under windows. To get clipboard sharing to work, you'll need an X-server such as [VcXrv](https://sourceforge.net/projects/vcxsrv/). I suggest you follow the steps outlined in [this stackoverflow post](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
+
+
 ## Troubleshooting
 
 * Problem diagnosis --> Run ```:CheckHealth```
@@ -39,3 +43,4 @@ This will effectively make you have one vimrc. In-order to keep regular _vim_ fu
 > ERROR: has("python3") was not succesful
 
 To fix: run ```pip3 install neovim``` in the same python enviornment you set in step 4.
+
