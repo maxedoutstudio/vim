@@ -30,9 +30,12 @@ This will effectively make you have one vimrc. In-order to keep regular _vim_ fu
 
 5. Open neovim, run ex-command: ```:PlugInstall```
 
+
 ## Clipboard Sharing
 WSL 2 changes how clipboard works. Albeit not directly related to the VIM config, without clipboard sharing, Neovim is effectively unusable for development under windows. To get clipboard sharing to work, you'll need an X-server such as [VcXrv](https://sourceforge.net/projects/vcxsrv/). I suggest you follow the steps outlined in [this stackoverflow post](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
 
+## Python Environment
+[Here's](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/) a decent blog post on setting up Python dev environment in neovim.
 
 ## Troubleshooting
 
